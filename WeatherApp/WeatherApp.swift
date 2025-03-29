@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
-struct WeatherAppApp: App {
+struct WeatherApp: App {
+    let dependencies = DependencyContainer()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                WeatherView(viewModel: dependencies.makeWeatherViewModel())
+            }
         }
     }
 }
