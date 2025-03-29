@@ -8,7 +8,7 @@
 import Foundation
 
 class WeatherRemoteDataSource {
-    private let apiKey = "5e240b21217d0ee1a9661d45adac7217"
+    private let apiKey = "API_KEY"
     private let baseURL = "https://api.openweathermap.org/data/2.5/weather"
     
     func getWeather(forCity cityName: String) async throws -> WeatherResponseDTO {
